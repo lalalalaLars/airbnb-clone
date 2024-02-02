@@ -1,13 +1,46 @@
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchListingById } from "../../service/api";
+import {
+  fetchListingByIdStart,
+  fetchListingByIdSuccess,
+  fetchListingByIdFailure,
+} from "../../store/reducers/listingsSlice";
 import "./Details.scss";
 import Gallery from "../../components/Gallery/Gallery";
 import DetailsInfo from "../../components/DetailsInfo/DetailsInfo";
-import { useParams } from "react-router-dom";
-import { listings } from "../..//data/data";
 
 const Details = () => {
   const { id } = useParams();
 
-  const listing = listings.find((listing) => listing.id === parseInt(id));
+  const dispatch = useDispatch();
+  const { listing, loading, error } = useSelector((state) => state.listings);
+
+  useEffect(() => {
+    dispatch(fetchListingByIdStart());
+    fetchListingById(id)
+      .then((data) => {
+        dispatch(fetchListingByIdSuccess(data));
+      })
+      .catch((error) => {
+        dispatch(fetchListingByIdFailure(error));
+      });
+  }, [dispatch, id]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+
+  // Ensure that listing is not undefined before accessing its properties
+  if (!listing) {
+    return <div>No data available</div>;
+  }
 
   return (
     <div className="details">

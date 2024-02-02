@@ -2,7 +2,7 @@
 import "./DetailsInfo.scss";
 
 const DetailsInfo = ({ details }) => {
-  return <div>DetailsInfo</div>;
+  return <div>{details.description}</div>;
 };
 
 export default DetailsInfo;

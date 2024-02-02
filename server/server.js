@@ -12,20 +12,20 @@ app.use(express.json());
 // Define routes
 
 // Route to get all listings
-app.get("/listings", (req, res) => {
+app.get("/api/listings", (req, res) => {
   res.json(listings);
 });
 
 //// Route to get a specific listing by ID
-//app.get("api/listings/:id", (req, res) => {
-//  const id = parseInt(req.params.id);
-//  const listing = listings.find((listing) => listing.id === id);
-//  if (listing) {
-//    res.json(listing);
-//  } else {
-//    res.status(404).json({ message: "Listing not found" });
-//  }
-//});
+app.get("/api/listings/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const listing = listings.find((listing) => listing.id === id);
+  if (listing) {
+    res.json(listing);
+  } else {
+    res.status(404).json({ message: "Listing not found" });
+  }
+});
 
 // Start the server
 app.listen(port, () => {
