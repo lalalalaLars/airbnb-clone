@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 80px;
+
+  .listings {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    column-gap: 39px;
+    row-gap: 50px;
+  }
+}

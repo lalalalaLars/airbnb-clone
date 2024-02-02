@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+
+.searchBarcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  .searchBar {
+    display: flex;
+    flex-direction: row;
+    box-shadow: $shadow;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+
+    .inputWrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 15px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lightgray;
+      }
+
+      h4 {
+        font-size: 12px;
+      }
+
+      input {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: 14px;
+      }
+    }
+
+    .inputWrapperGuest {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10px 0 30px;
+      border-radius: 50px;
+      column-gap: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lightgray;
+      }
+
+      .guestContent {
+        h4 {
+          font-size: 12px;
+        }
+
+        input {
+          outline: none;
+          border: none;
+          font-size: 14px;
+          background-color: transparent;
+        }
+      }
+      button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: none;
+        background-color: $red;
+        cursor: pointer;
+      }
+    }
+  }
+}

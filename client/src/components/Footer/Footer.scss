@@ -1,0 +1,17 @@
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 280px;
+  padding: 50px 80px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    font-size: 15px;
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+}
