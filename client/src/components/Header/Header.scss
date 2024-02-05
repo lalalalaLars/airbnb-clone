@@ -38,12 +38,26 @@
       width: 250px;
 
       button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
         border: 1.5px solid rgba(0, 0, 0, 0.2);
         background-color: white;
         border-radius: 50px;
-        width: 85.6px;
-        height: 48px;
+        padding: 6px 10px;
         cursor: pointer;
+
+        .avatarIcon {
+          width: 40px;
+          height: 40px;
+          opacity: 50%;
+        }
+
+        .menuIcon {
+          width: 20px;
+          height: 20px;
+        }
 
         &:hover {
           box-shadow: $shadow;
@@ -70,5 +84,6 @@
     border-radius: 8px;
     padding: 20px 70px 20px 20px;
     box-shadow: $shadow;
+    background-color: white;
   }
 }

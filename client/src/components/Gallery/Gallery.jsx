@@ -11,7 +11,15 @@ const Gallery = ({ gallery }) => {
             key={index}
             src={image}
             alt=""
-            className={index === 0 ? "bigImage" : ""}
+            className={
+              index === 0
+                ? "bigImage"
+                : index === 2
+                ? "image2"
+                : index === 4
+                ? "image4"
+                : ""
+            }
           />
         ))}
     </div>
