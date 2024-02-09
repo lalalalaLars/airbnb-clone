@@ -1,4 +1,4 @@
-Airbnb Clone project
+Airbnb Clone project (Work in progress)
 
 The Frontend is build with **React**, **Redux toolkit** and **SCSS**.
 
