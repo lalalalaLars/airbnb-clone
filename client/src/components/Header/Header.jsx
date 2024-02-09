@@ -1,9 +1,10 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Header.scss";
 import { navLinks, dropdownLinks } from "../../constants/constants";
-
-import { useState } from "react";
+import { MenuIcon, AccountCircleIcon } from "../../constants/icons";
 import SearchBar from "../SearchBar/SearchBar";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -28,7 +29,10 @@ const Header = () => {
         <div className="accountContainer">
           <div className="accountLinks">
             <h4>Airbnb din bolig</h4>
-            <button onClick={toggleDropdown}>menu</button>
+            <button onClick={toggleDropdown}>
+              <MenuIcon className="menuIcon" />
+              <AccountCircleIcon className="avatarIcon" />
+            </button>
           </div>
           {showDropdown && (
             <div className="dropdownContent">

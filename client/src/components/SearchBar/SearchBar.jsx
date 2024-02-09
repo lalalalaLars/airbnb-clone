@@ -1,4 +1,5 @@
 import "./SearchBar.scss";
+import { SearchIcon } from "../../constants/icons";
 
 const SearchBar = () => {
   return (
@@ -21,8 +22,10 @@ const SearchBar = () => {
             <h4>Hvem?</h4>
             <input type="text" placeholder="Tilføj gæster" />
           </div>
-          <button>Search</button>
         </div>
+        <button>
+          <SearchIcon className="searchIcon" />
+        </button>
       </div>
     </div>
   );

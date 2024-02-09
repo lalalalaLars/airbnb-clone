@@ -6,7 +6,9 @@
   justify-content: center;
   align-items: end;
   .searchBar {
+    position: relative;
     display: flex;
+    align-items: center;
     flex-direction: row;
     box-shadow: $shadow;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -60,14 +62,21 @@
           background-color: transparent;
         }
       }
-      button {
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        border: none;
-        background-color: $red;
-        cursor: pointer;
-      }
+    }
+    button {
+      position: absolute;
+      left: 93%;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      border: none;
+      background-color: $red;
+      cursor: pointer;
+      color: white;
     }
   }
 }

@@ -1,0 +1,56 @@
+.detailsInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 650px;
+
+  &__topDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      list-style: none;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h4 {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+}

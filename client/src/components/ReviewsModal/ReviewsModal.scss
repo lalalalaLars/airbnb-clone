@@ -1,0 +1,43 @@
+@import "../../styles/variables.scss";
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1000; /* Ensure the overlay is on top of other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__modal {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1100; /* Ensure the modal content is on top of the overlay */
+  }
+
+  &__wrapper {
+    padding: 30px;
+  }
+
+  &__overallRating {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__ratingProgress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
